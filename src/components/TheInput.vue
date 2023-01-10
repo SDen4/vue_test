@@ -45,12 +45,4 @@ export default {
 .button:hover {
   background-color: darkgreen;
 }
-
-@media (min-width: 1024px) {
-  .todoWrapper {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
 </style>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Input from "../components/TheInput.vue";
+import ToDoList from "../components/TheToDoList.vue";
 </script>
 
 <template>
@@ -7,6 +8,7 @@ import Input from "../components/TheInput.vue";
     <h1>This is an TODO page</h1>
 
     <Input />
+    <ToDoList />
   </div>
 </template>
 
