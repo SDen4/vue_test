@@ -1,20 +1,11 @@
-<script lang="ts">
-export default {
-  data() {
-    return {
-      toDoList: [
-        { id: "1", name: "todo #1", done: false },
-        { id: "2", name: "todo #2543", done: false },
-      ],
-    };
-  },
-};
-</script>
-
 <template>
   <h2>Todos:</h2>
   <ul class="listWrapper">
-    <li v-for="(todo, index) in toDoList" v-bind:key="todo.id" class="todoItem">
+    <li
+      v-for="(todo, index) in this.$store.state.toDoList"
+      v-bind:key="todo.id"
+      class="todoItem"
+    >
       {{ index + 1 }}. {{ todo.name }}
       <button type="button" class="button buttonDel">del</button>
     </li>

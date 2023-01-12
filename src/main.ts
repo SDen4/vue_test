@@ -1,11 +1,27 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from "vue";
+import { createStore } from "vuex";
 
-import './assets/main.css'
+import App from "./App.vue";
+import router from "./router";
 
-const app = createApp(App)
+import "./assets/main.css";
 
-app.use(router)
+// store
+const store = createStore({
+  state() {
+    return {
+      toDoList: [
+        { id: "1", name: "todo #1", done: false },
+        { id: "2", name: "todo #2543", done: false },
+        { id: "3", name: "todo #100 from store", done: false },
+      ],
+    };
+  },
+});
 
-app.mount('#app')
+const app = createApp(App);
+
+app.use(router);
+app.use(store);
+
+app.mount("#app");
